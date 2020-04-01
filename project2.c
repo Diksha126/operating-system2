@@ -17,14 +17,14 @@ char *dest=arg[2];
 
 if(pipe(fd)<0)
 {
-printf("error creating the pipe! %s\n",strerror(errno));
+printf("error!!!");
 exit(1);
 }
 
 switch(fork())
 {
 case -1:
-printf("error forking child process %s\n",strerror(errno));
+printf("error forking child process \n");
 exit(1);
 case 0:
 close(fd[1]);
