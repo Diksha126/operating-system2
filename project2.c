@@ -7,7 +7,7 @@
 
 int main(int argc, char *arg[])
 {
-int fd[2];
+int fd[2]; // file descripters for the files
 int filebytelen;
 char buffer[100];
 char childbuffer[100];
@@ -17,7 +17,7 @@ char *dest=arg[2];
 
 if(pipe(fd)<0)
 {
-printf("error!!!");
+printf("error while creating pipe!!!");
 exit(1);
 }
 
